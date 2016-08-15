@@ -1,0 +1,26 @@
+# DO NOT EDIT. This file is generated from Config.src
+#
+# For a description of the syntax of this configuration file,
+# see scripts/kbuild/config-language.txt.
+#
+
+config PHDDNS
+	bool "phddns"
+	default n  # not yet ready
+	depends on FEATURE_IPV6
+	help
+	  phddns is a DDNS client
+
+config PHDDNS_LOGFILE
+	string "Absolute path to log file"
+	default "/var/log/phddns.log"
+	depends on PHDDNS
+	help
+	  This is the path to the log file configuration
+
+config PHDDNS_CONFIGFILE
+	string "Absolute path to config file"
+	default "/etc/phlinux.conf"
+	depends on PHDDNS
+	help
+	  This is the path to the config file configuration

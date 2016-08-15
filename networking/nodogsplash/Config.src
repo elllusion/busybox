@@ -1,0 +1,33 @@
+#
+# For a description of the syntax of this configuration file,
+# see scripts/kbuild/config-language.txt.
+#
+
+INSERT
+
+config NODOGSPLASH
+    bool "nodogsplsh for busybox"
+    default n  # not yet ready
+    help
+      Nodogsplash offers a simple way to provide restricted access to an internet
+      connection. It is derived from the codebase of the Wifi Guard Dog project.
+      Nodogsplash is released under the GNU General Public License.
+
+config NDSCTL
+    bool "ndsctl for busybox"
+    default n  # not yet ready
+    depends on NODOGSPLASH
+    help
+      Nodogsplash offers a simple way to provide restricted access to an internet
+      connection. It is derived from the codebase of the Wifi Guard Dog project.
+      Nodogsplash is released under the GNU General Public License.
+
+
+#config NODOGSPLASH_LIBHTTPD
+#    bool "libhttpd for nodogsplsh"
+#    default n  # not yet ready
+#    help
+#      Nodogsplash offers a simple way to provide restricted access to an internet
+#      connection. It is derived from the codebase of the Wifi Guard Dog project.
+#      Nodogsplash is released under the GNU General Public License.
+
